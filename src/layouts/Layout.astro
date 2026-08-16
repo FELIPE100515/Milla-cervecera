@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "La Milla Cervecera - Polafest" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-[#fff9ee] text-[#1e1b12] font-['Archivo_Narrow'] min-h-screen relative overflow-x-hidden"
+  >
+    <div class="noise-overlay"></div>
+    
+    <!-- Background Corner Elements -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <img
+        src="/fondo_esquinas.png"
+        alt=""
+        class="w-[102%] h-[102%] -top-[1%] -left-[1%] absolute object-fill opacity-100"
+      />
+    </div>
+
+    <div class="relative z-10">
+      <slot />
+    </div>
+  </body>
+</html>

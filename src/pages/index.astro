@@ -1,0 +1,515 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="La Milla Cervecera - Polafest">
+  <!-- Navigation -->
+  <nav
+    class="bg-[#fff9ee] w-full top-0 sticky z-40 border-b-4 border-[#a04100] shadow-[4px_4px_0px_0px_rgba(160,65,0,1)] flex justify-between items-center px-5 md:px-16 py-4 max-w-7xl mx-auto"
+  >
+    <a class="flex items-center" href="#">
+      <img
+        src="/logosf.png"
+        alt="La Milla Cervecera Logo"
+        class="h-12 w-auto object-contain hover:skew-x-[-10deg] transition-transform"
+      />
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a
+        class="text-[#1e1b12] font-medium hover:text-[#096c4b] hover:skew-x-[-10deg] transition-transform font-['Space_Grotesk'] text-sm uppercase tracking-wider"
+        href="#ruta">La Ruta</a
+      >
+      <a
+        class="text-[#1e1b12] font-medium hover:text-[#096c4b] hover:skew-x-[-10deg] transition-transform font-['Space_Grotesk'] text-sm uppercase tracking-wider"
+        href="#recorrido">El Recorrido</a
+      >
+      <a
+        class="text-[#1e1b12] font-medium hover:text-[#096c4b] hover:skew-x-[-10deg] transition-transform font-['Space_Grotesk'] text-sm uppercase tracking-wider"
+        href="#kit">El Kit</a
+      >
+      <a
+        class="text-[#1e1b12] font-medium hover:text-[#096c4b] hover:skew-x-[-10deg] transition-transform font-['Space_Grotesk'] text-sm uppercase tracking-wider"
+        href="#patrocinadores">Patrocinadores</a
+      >
+    </div>
+    
+    <div class="flex items-center gap-4">
+      <!-- Instagram Link -->
+      <a 
+        href="https://www.instagram.com/lamillacervecera/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-[#a04100] hover:text-[#096c4b] transition-colors"
+        aria-label="Instagram"
+      >
+        <svg class="h-7 w-7 fill-current" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+        </svg>
+      </a>
+      <!-- WhatsApp Link -->
+      <a 
+        href="https://wa.me/573165249494" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-[#a04100] hover:text-[#096c4b] transition-colors"
+        aria-label="WhatsApp"
+      >
+        <svg class="h-7 w-7 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.455L0 24zm6.59-4.846c1.66.986 3.284 1.488 4.96 1.49h.005c5.385 0 9.766-4.381 9.77-9.766.002-2.609-1.012-5.062-2.857-6.91A9.689 9.689 0 0 0 12.008 1.91c-5.392 0-9.776 4.384-9.78 9.771a9.742 9.742 0 0 0 1.503 5.092l-1.095 4.002 4.1-.115zM17.1 14.755c-.279-.14-1.651-.814-1.907-.907-.256-.093-.442-.14-.628.14-.186.279-.721.907-.884 1.093-.163.186-.326.21-.605.07-2.766-1.385-4.56-3.495-5.321-4.805-.21-.36.21-.334.6-.112.35.198.465.33.616.634.151.303.076.57-.038.803-.112.233-.884 2.13-.988 2.385-.209.512-.628.233-.884.07a8.55 8.55 0 0 1-2.221-1.614c-.837-.745-1.401-1.663-1.564-1.942-.163-.279-.017-.43.122-.569.125-.125.279-.326.419-.489.14-.163.186-.279.279-.465.093-.186.047-.35-.023-.489-.07-.14-.628-1.512-.86-2.07-.226-.543-.454-.47-.628-.478-.163-.008-.35-.01-.535-.01-.186 0-.489.07-.745.35-.256.279-.977.954-.977 2.327s1.001 2.701 1.14 2.887c.14.186 1.97 3.01 4.773 4.218 2.802 1.208 2.802.805 3.31.758.508-.047 1.651-.675 1.884-1.327.233-.652.233-1.21.163-1.327-.07-.116-.256-.21-.535-.35z"/>
+        </svg>
+      </a>
+      
+      <a
+        href="https://quickticket.com.co/event/735168ef-62c7-4e58-8fa2-6bc5e1344129?fbclid=PAcGRvZgRleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAaetVql81B_FNZBYgL2ud6LBXwRpZJA1FBrXCoxWDr7gISamrlus_NEXiZ0mzw_aem_GMWJ_Qg1F2b3h6Wyc1UJjA"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-[#096c4b] text-white font-['Anton'] text-lg px-6 py-2 uppercase tracking-wide hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted block text-center"
+      >
+        <span class="block un-slanted">REGISTRARSE</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-5 md:px-16 py-8 relative z-10 space-y-24">
+    <!-- Hero Section -->
+    <section
+      class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center min-h-[70vh] relative"
+    >
+      <!-- Decorative Pattern -->
+      <div
+        class="absolute inset-0 leopard-pattern -z-10 w-full h-[80vh] top-0 left-0"
+      >
+      </div>
+
+      <div
+        class="col-span-1 md:col-span-6 space-y-6 order-2 md:order-1 flex flex-col justify-center"
+      >
+        <div
+          class="inline-block bg-[#ff6b00] text-[#572000] px-4 py-1 skew-x-[-10deg] hard-shadow-primary w-max mb-4"
+        >
+          <span
+            class="font-['Anton'] text-lg uppercase italic block skew-x-[10deg]"
+            >BUCARAMANGA / POLAFEST VII EDICIÓN</span
+          >
+        </div>
+
+        <h1
+          class="font-['Anton'] text-5xl md:text-7xl text-[#a04100] uppercase italic leading-none tracking-tighter"
+        >
+          LA MILLA<br />CERVECERA
+        </h1>
+
+        <div class="flex flex-wrap gap-4 mt-8">
+          <div
+            class="bg-[#096c4b] text-white p-4 flex flex-col items-center justify-center hard-shadow-primary w-32 rotate-[-3deg]"
+          >
+            <span class="font-['Space_Grotesk'] text-xs uppercase opacity-80"
+              >Fecha</span
+            >
+            <span class="font-['Anton'] text-3xl uppercase">13 SEP</span>
+          </div>
+          <div
+            class="bg-[#096c4b] text-white p-4 flex flex-col items-center justify-center hard-shadow-primary w-32 rotate-[2deg]"
+          >
+            <span class="font-['Space_Grotesk'] text-xs uppercase opacity-80"
+              >Valor</span
+            >
+            <span class="font-['Anton'] text-3xl uppercase">120K</span>
+          </div>
+          <div
+            class="bg-[#ff6b00] text-[#572000] p-4 flex flex-col items-center justify-center hard-shadow-primary flex-1 min-w-[200px] skew-x-[-5deg]"
+          >
+            <span
+              class="font-['Space_Grotesk'] text-xs uppercase opacity-80 skew-x-[5deg] block"
+              >Distancia</span
+            >
+            <span
+              class="font-['Anton'] text-3xl uppercase skew-x-[5deg] block italic"
+              >3 KM</span
+            >
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a
+            href="https://quickticket.com.co/event/735168ef-62c7-4e58-8fa2-6bc5e1344129?fbclid=PAcGRvZgRleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAaetVql81B_FNZBYgL2ud6LBXwRpZJA1FBrXCoxWDr7gISamrlus_NEXiZ0mzw_aem_GMWJ_Qg1F2b3h6Wyc1UJjA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-[#096c4b] text-white font-['Anton'] text-2xl px-12 py-4 uppercase tracking-wide hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 w-full md:w-auto text-center slanted block"
+          >
+            <span class="block un-slanted">INSCRIBETE AHORA</span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="col-span-1 md:col-span-6 order-1 md:order-2 relative h-[50vh] md:h-[600px] min-h-[400px]"
+      >
+        <!-- Main athletic image -->
+        <img
+          alt="Corredor La Milla"
+          class="absolute inset-0 w-full h-full object-cover object-center grayscale-[20%] contrast-125 sepia-[10%] hard-shadow-primary border-4 border-white"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuARZevdcOuiJIb4xC6WfpF-7qzgZM5DaCftmTLoiUQsbAK2Q0bvw366sA_bFd0UoYFdPkPhcFuNfxLnd7jgKTbGTkJbj7y3zsF3XaHjio_RQ2BR7YyTcQRO7LsqP6tttJFA8KzbFwLalYFyQSiyBC1syczhUlTQoRBSV3RyoICBrBcxqToVoeOC1NNHQTtOQ7CjSlPTK18E7ZE7K8RkuLEBMXT3YppHTnU6RUtGvUU_3t5jmLIbQ3l43x9bghbNkHVwQA"
+        />
+
+        <!-- Finisher medal graphic -->
+        <div
+          class="absolute -bottom-6 -right-6 bg-[#fff9ee] p-4 border-4 border-[#a04100] hard-shadow-primary rotate-12 z-20"
+        >
+          <img
+            alt="Medal Preview"
+            class="w-24 h-auto"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQzOHm08NWPdcpyIrjFj5uWFRNamf36g0OHkrYSolqTKWuto8zAoNefFeItdhup8LuViRSUFwUkyVn0Mdu-aMOV7liAZH3fSf1IJPpZ4gKOVIRk_4MRkCXVbT0ob_AEDO2VyLIz4_Wiy9uwDsQ29IxXTafUMczmnC9MWLY7Godr5nzB1ueX3vI3zjTpDmo2YUPkhfZSoyA36a8rLLL2hY33Kr8vN5hDgj0wfAS2SEXbRSwhw1476wy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Details (Bento Grid) -->
+    <section class="py-12 border-t-4 border-dashed border-[#e2bfb0]" id="ruta">
+      <h2
+        class="font-['Anton'] text-3xl md:text-4xl text-[#a04100] uppercase italic mb-8 inline-block bg-[#f4edde] px-6 py-2 hard-shadow-primary skew-x-[-5deg]"
+      >
+        LA CARRERA MÁS BACANA
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div
+          class="bg-[#096c4b] text-white p-8 border-4 border-[#a04100] hard-shadow-primary relative overflow-hidden group hover:-translate-y-2 transition-all duration-300"
+        >
+          <div
+            class="absolute -right-4 -top-4 opacity-10 group-hover:scale-110 transition-transform duration-500"
+          >
+            <span
+              class="material-symbols-outlined text-[120px]"
+              style="font-variation-settings: 'FILL' 1;">sprint</span
+            >
+          </div>
+          <h3
+            class="font-['Anton'] text-2xl uppercase italic mb-4 relative z-10"
+          >
+            CORRE 3KM
+          </h3>
+          <p
+            class="font-['Archivo_Narrow'] text-lg relative z-10 text-white/90"
+          >
+            Una ruta diseñada para disfrutar. No importa tu ritmo, lo importante
+            es llegar a la meta y celebrar.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="bg-[#ff6b00] text-[#572000] p-8 border-4 border-[#a04100] hard-shadow-primary relative overflow-hidden group hover:-translate-y-2 transition-all duration-300"
+        >
+          <div
+            class="absolute -right-4 -top-4 opacity-10 group-hover:scale-110 transition-transform duration-500"
+          >
+            <span
+              class="material-symbols-outlined text-[120px]"
+              style="font-variation-settings: 'FILL' 1;">sports_bar</span
+            >
+          </div>
+          <h3
+            class="font-['Anton'] text-2xl uppercase italic mb-4 relative z-10"
+          >
+            CELEBRA EN POLAFEST
+          </h3>
+          <p
+            class="font-['Archivo_Narrow'] text-lg relative z-10 text-[#572000]/90"
+          >
+            Tu inscripción te da acceso directo al festival de cerveza artesanal
+            más grande de la ciudad. ¡Salud por el esfuerzo!
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="bg-[#eee8d9] text-[#1e1b12] p-8 border-4 border-[#a04100] hard-shadow-primary relative overflow-hidden group hover:-translate-y-2 transition-all duration-300"
+        >
+          <div
+            class="absolute -right-4 -top-4 opacity-10 text-[#a04100] group-hover:scale-110 transition-transform duration-500"
+          >
+            <span
+              class="material-symbols-outlined text-[120px]"
+              style="font-variation-settings: 'FILL' 1;">groups</span
+            >
+          </div>
+          <h3
+            class="font-['Anton'] text-2xl uppercase italic text-[#a04100] mb-4 relative z-10"
+          >
+            PARCHE COMPLETO
+          </h3>
+          <p class="font-['Archivo_Narrow'] text-lg relative z-10">
+            Música en vivo, gastronomía local y el mejor ambiente. Arma tu grupo
+            de corredores y vivan la experiencia juntos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recorrido (Mapa) Section -->
+    <section
+      class="py-12 border-t-4 border-dashed border-[#e2bfb0]"
+      id="recorrido"
+    >
+      <h2
+        class="font-['Anton'] text-3xl md:text-4xl text-[#a04100] uppercase italic mb-8 inline-block bg-[#f4edde] px-6 py-2 hard-shadow-primary skew-x-[-5deg]"
+      >
+        EL RECORRIDO
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <!-- Map Container -->
+        <div
+          class="md:col-span-8 bg-[#fff9ee] border-4 border-[#a04100] hard-shadow-primary p-2 overflow-hidden"
+        >
+          <img
+            alt="Mapa del recorrido 3K"
+            class="w-full h-auto object-cover contrast-125 grayscale-[10%]"
+            src="/mapa.png"
+          />
+        </div>
+        <!-- Route Details -->
+        <div class="md:col-span-4 space-y-6">
+          <div
+            class="bg-[#096c4b] text-white p-6 hard-shadow-primary skew-x-[-2deg]"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-[#ff6b00]">flag</span>
+              <h3 class="font-['Space_Grotesk'] text-sm uppercase opacity-80">
+                Punto de Partida
+              </h3>
+            </div>
+            <p class="font-['Anton'] text-2xl uppercase italic leading-none">
+              Pista de Atletismo Américo Montanini
+            </p>
+          </div>
+          <div
+            class="bg-[#ff6b00] text-[#572000] p-6 hard-shadow-primary rotate-[1deg]"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined">sports_score</span>
+              <h3 class="font-['Space_Grotesk'] text-sm uppercase opacity-80">
+                Meta
+              </h3>
+            </div>
+            <p class="font-['Anton'] text-2xl uppercase italic leading-none">
+              Tarima Polafest
+            </p>
+          </div>
+          <div
+            class="bg-[#eee8d9] text-[#1e1b12] p-6 border-4 border-[#a04100] hard-shadow-primary"
+          >
+            <h3
+              class="font-['Space_Grotesk'] text-sm uppercase text-[#a04100] mb-4 font-bold"
+            >
+              Detalles de la Ruta
+            </h3>
+            <ul class="space-y-3 font-['Archivo_Narrow'] text-lg">
+              <li class="flex items-start gap-2">
+                <span
+                  class="material-symbols-outlined text-[#096c4b] text-sm mt-1"
+                  >circle</span
+                >
+                <span
+                  >1. Salida desde la pista atlética hacia la <strong
+                    >Calle 14</strong
+                  >.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span
+                  class="material-symbols-outlined text-[#096c4b] text-sm mt-1"
+                  >circle</span
+                >
+                <span
+                  >2. Giro por la <strong>Carrera 27</strong> hacia la <strong
+                    >Calle 11</strong
+                  >.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span
+                  class="material-symbols-outlined text-[#096c4b] text-sm mt-1"
+                  >circle</span
+                >
+                <span
+                  >3. Retorno hacia la plazoleta del <strong
+                    >Américo Montanini</strong
+                  >, rodeando el estadio completamente.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span
+                  class="material-symbols-outlined text-[#096c4b] text-sm mt-1"
+                  >circle</span
+                >
+                <span
+                  >4. Llegada hasta la <strong
+                    >tarima principal del Polafest</strong
+                  >.</span
+                >
+              </li>
+            </ul>
+            <div class="mt-6 pt-4 border-t-2 border-dashed border-[#a04100]/30">
+              <span class="font-['Anton'] text-2xl text-[#a04100] italic"
+                >DISTANCIA 3K</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kit Section -->
+    <section class="py-12 relative" id="kit">
+      <div
+        class="bg-[#096c4b] text-white p-8 border-4 border-[#a04100] hard-shadow-primary relative z-10"
+      >
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <!-- Text/List Side -->
+          <div class="w-full md:w-1/3">
+            <div
+              class="bg-[#fff9ee] text-[#096c4b] inline-block px-4 py-2 skew-x-[-10deg] mb-6 border-2 border-[#096c4b]"
+            >
+              <h2
+                class="font-['Anton'] text-3xl uppercase italic skew-x-[10deg] tracking-tighter m-0 leading-none"
+              >
+                INCLUYE<br />KIT
+              </h2>
+            </div>
+            <ul class="space-y-4 font-['Anton'] text-2xl uppercase italic">
+              <li
+                class="flex items-center gap-2 border-b-2 border-dashed border-[#84d7ae] pb-2"
+              >
+                <span class="material-symbols-outlined text-[#ff6b00]"
+                  >star</span
+                > MEDALLA ICÓNICA OFICIAL
+              </li>
+              <li
+                class="flex items-center gap-2 border-b-2 border-dashed border-[#84d7ae] pb-2"
+              >
+                <span class="material-symbols-outlined text-[#ff6b00]"
+                  >apparel</span
+                > CAMISETA OFICIAL
+              </li>
+              <li
+                class="flex items-center gap-2 border-b-2 border-dashed border-[#84d7ae] pb-2"
+              >
+                <span class="material-symbols-outlined text-[#ff6b00]">tag</span
+                > DORSAL
+              </li>
+              <li
+                class="flex items-center gap-2 border-b-2 border-dashed border-[#84d7ae] pb-2"
+              >
+                <span class="material-symbols-outlined text-[#ff6b00]"
+                  >water_bottle</span
+                > TERMO
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[#ff6b00]"
+                  >backpack</span
+                > TULA
+              </li>
+            </ul>
+            <p
+              class="font-['Space_Grotesk'] text-xs mt-6 text-white/70 max-w-sm"
+            >
+              *El contenido final del kit de carrera está sujeto a cambios por
+              parte de los patrocinadores y marcas aliadas. Próximamente
+              brindaremos la información detallada de todos los componentes del
+              kit.
+            </p>
+          </div>
+          <!-- Image Side -->
+          <div class="w-full md:w-2/3 flex items-center justify-center bg-[#fff9ee] p-4 border-4 border-[#ff6b00] hard-shadow-primary relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+            <img
+              alt="Kit Oficial de Carrera"
+              class="w-full h-auto max-h-[500px] object-contain mix-blend-multiply"
+              src="/kit_de_carrera.png"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- decorative element behind kit -->
+      <div
+        class="absolute top-1/2 -right-12 w-64 h-64 bg-[#ff6b00] rounded-full mix-blend-multiply filter blur-3xl opacity-30 -z-10"
+      >
+      </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section
+      class="py-12 border-y-4 border-[#a04100] bg-[#faf3e4] my-12"
+      id="patrocinadores"
+    >
+      <div class="bg-[#096c4b] py-6 px-8 shadow-[4px_4px_0px_0px_rgba(160,65,0,1)] slanted flex flex-col items-center gap-6">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-12 flex-wrap un-slanted w-full"
+        >
+          <img
+            alt="Aguila"
+            class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
+            src="/aguila_2.png"
+          />
+          <img
+            alt="La Feria Bonita"
+            class="h-20 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
+            src="/feria_2.png"
+          />
+          <img
+            alt="Polafest"
+            class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
+            src="/polafest_logo.png"
+          />
+          <img
+            alt="Coca Cola"
+            class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
+            src="/coca_cola.png"
+          />
+          <img
+            alt="IMEBU"
+            class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
+            src="/imebu.png"
+          />
+        </div>
+        <div class="un-slanted border-t border-white/20 pt-4 w-full flex justify-center">
+          <img
+            alt="Advertencia de ley"
+            class="h-6 md:h-8 object-contain brightness-0 invert opacity-90"
+            src="/advertencia_1.png"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="bg-[#096c4b] flex flex-col md:flex-row justify-between items-center w-full px-5 md:px-16 py-12 gap-8 border-t-8 border-[#a04100] relative z-20"
+  >
+    <div
+      class="font-['Anton'] text-4xl text-white italic uppercase tracking-tighter"
+    >
+      LA MILLA<br />CERVECERA
+    </div>
+    <div class="flex flex-col md:flex-row gap-6 items-center">
+      <a
+        class="text-white font-['Space_Grotesk'] text-sm hover:text-[#ffb693] transition-colors uppercase tracking-wider"
+        href="#">Términos y Condiciones</a
+      >
+      <a
+        class="text-white font-['Space_Grotesk'] text-sm hover:text-[#ffb693] transition-colors uppercase tracking-wider"
+        href="#">Política de Privacidad</a
+      >
+      <a
+        class="text-white font-['Space_Grotesk'] text-sm hover:text-[#ffb693] transition-colors uppercase tracking-wider"
+        href="#">Contacto</a
+      >
+    </div>
+    <div
+      class="font-['Archivo_Narrow'] text-sm text-white/70 text-center md:text-right max-w-xs"
+    >
+      © 2024 LA MILLA CERVECERA - POLAFEST BUCARAMANGA. TODOS LOS DERECHOS
+      RESERVADOS.
+    </div>
+  </footer>
+</Layout>
