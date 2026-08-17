@@ -3,14 +3,20 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="La Milla Cervecera - Polafest">
+  <link rel="preload" href="/hero.webp" as="image" type="image/webp" fetchpriority="high" slot="head" />
+
   <!-- Navigation -->
   <nav
     class="bg-[#fff9ee] w-full top-0 sticky z-40 border-b-4 border-[#a04100] shadow-[4px_4px_0px_0px_rgba(160,65,0,1)] flex justify-between items-center px-5 md:px-16 py-4"
   >
-    <a class="flex items-center" href="#">
+    <a class="flex items-center" href="#" aria-label="Inicio - La Milla Cervecera">
       <img
-        src="/logosf.png"
+        src="/logosf.webp"
         alt="La Milla Cervecera Logo"
+        width="492"
+        height="366"
+        loading="eager"
+        decoding="async"
         class="h-12 w-auto object-contain hover:skew-x-[-10deg] transition-transform"
       />
     </a>
@@ -20,18 +26,24 @@ import Layout from "../layouts/Layout.astro";
         href="https://www.instagram.com/lapolafest/"
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-[#ff6b00] px-3 py-1 sm:px-5 sm:py-1.5 hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted flex items-center justify-center"
+        class="bg-[#ff6b00] px-3 py-2 sm:px-5 sm:py-1.5 hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted flex items-center justify-center"
+        aria-label="Instagram Polafest"
       >
         <img
-          src="/polafest_logo.png"
-          alt="Polafest" class="h-6 sm:h-8 w-auto object-contain un-slanted brightness-0 invert"
+          src="/polafest_logo.webp"
+          alt="Polafest"
+          width="2000"
+          height="827"
+          loading="eager"
+          decoding="async"
+          class="h-6 sm:h-8 w-auto object-contain un-slanted brightness-0 invert"
         />
       </a>
       <a
         href="https://quickticket.com.co/event/735168ef-62c7-4e58-8fa2-6bc5e1344129?fbclid=PAcGRvZgRleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAaetVql81B_FNZBYgL2ud6LBXwRpZJA1FBrXCoxWDr7gISamrlus_NEXiZ0mzw_aem_GMWJ_Qg1F2b3h6Wyc1UJjA"
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-[#096c4b] text-white font-['Anton'] text-xs sm:text-lg px-3 py-1.5 sm:px-6 sm:py-2 uppercase tracking-wide hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted block text-center"
+        class="bg-[#096c4b] text-white font-['Anton'] text-xs sm:text-lg px-4 py-2.5 sm:px-6 sm:py-2 uppercase tracking-wide hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted block text-center"
       >
         <span class="block un-slanted">REGISTRARSE</span>
       </a>
@@ -62,9 +74,14 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <h1 class="mb-4">
+          <span class="sr-only">La Milla Cervecera</span>
           <img
-            src="/logosf.png"
+            src="/logosf.webp"
             alt="La Milla Cervecera"
+            width="492"
+            height="366"
+            loading="eager"
+            decoding="async"
             class="h-32 md:h-48 w-auto object-contain hover:scale-105 transition-transform duration-200"
           />
         </h1>
@@ -118,8 +135,13 @@ import Layout from "../layouts/Layout.astro";
         <!-- Main athletic image -->
         <img
           alt="Corredor La Milla"
+          width="668"
+          height="889"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
           class="w-full h-auto grayscale-[20%] contrast-125 sepia-[10%] hard-shadow-primary border-4 border-white"
-          src="/hero.png"
+          src="/hero.webp"
         />
 
         <!-- Finisher medal graphic -->
@@ -127,7 +149,11 @@ import Layout from "../layouts/Layout.astro";
           class="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-[#fff9ee] p-4 border-4 border-[#a04100] hard-shadow-primary rotate-12 z-20"
         >
           <img
-            alt="Medal Preview"
+            alt="Vista previa de la medalla de finalista"
+            width="96"
+            height="96"
+            loading="lazy"
+            decoding="async"
             class="w-24 h-auto"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQzOHm08NWPdcpyIrjFj5uWFRNamf36g0OHkrYSolqTKWuto8zAoNefFeItdhup8LuViRSUFwUkyVn0Mdu-aMOV7liAZH3fSf1IJPpZ4gKOVIRk_4MRkCXVbT0ob_AEDO2VyLIz4_Wiy9uwDsQ29IxXTafUMczmnC9MWLY7Godr5nzB1ueX3vI3zjTpDmo2YUPkhfZSoyA36a8rLLL2hY33Kr8vN5hDgj0wfAS2SEXbRSwhw1476wy"
           />
@@ -237,8 +263,12 @@ import Layout from "../layouts/Layout.astro";
         >
           <img
             alt="Mapa del recorrido 3K"
+            width="999"
+            height="1575"
+            loading="lazy"
+            decoding="async"
             class="w-full h-auto object-cover contrast-125 grayscale-[10%]"
-            src="/mapa.png"
+            src="/mapa.webp"
           />
         </div>
         <!-- Route Details -->
@@ -257,7 +287,7 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </div>
           <div
-            class="bg-[#ff6b00] text-white p-6 hard-shadow-primary rotate-[1deg] text-center md:text-left"
+            class="bg-[#ff6b00] text-[#572000] p-6 hard-shadow-primary rotate-[1deg] text-center md:text-left"
           >
             <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
               <span class="material-symbols-outlined">sports_score</span>
@@ -399,8 +429,12 @@ import Layout from "../layouts/Layout.astro";
           <div class="w-full md:w-2/3 flex items-center justify-center bg-[#fff9ee] p-4 border-4 border-[#ff6b00] hard-shadow-primary relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
             <img
               alt="Kit Oficial de Carrera"
+              width="1430"
+              height="1100"
+              loading="lazy"
+              decoding="async"
               class="w-full h-auto max-h-[500px] object-contain mix-blend-multiply"
-              src="/kit_de_carrera.png"
+              src="/kit_de_carrera.webp"
             />
           </div>
         </div>
@@ -424,65 +458,109 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex items-center gap-12 md:gap-24 shrink-0">
               <img
                 alt="Aguila"
+                width="2000"
+                height="1055"
+                loading="lazy"
+                decoding="async"
                 class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/aguila_2.png"
+                src="/aguila_2.webp"
               />
               <img
                 alt="La Feria Bonita"
+                width="2000"
+                height="2229"
+                loading="lazy"
+                decoding="async"
                 class="h-20 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/feria_2.png"
+                src="/feria_2.webp"
               />
               <img
                 alt="Polafest"
+                width="2000"
+                height="827"
+                loading="lazy"
+                decoding="async"
                 class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/polafest_logo.png"
+                src="/polafest_logo.webp"
               />
               <img
                 alt="Coca Cola"
+                width="2000"
+                height="628"
+                loading="lazy"
+                decoding="async"
                 class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/coca_cola.png"
+                src="/coca_cola.webp"
               />
               <img
                 alt="IMEBU"
+                width="2000"
+                height="536"
+                loading="lazy"
+                decoding="async"
                 class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/imebu.png"
+                src="/imebu.webp"
               />
             </div>
             <!-- Second Set of Logos (for seamless looping) -->
             <div class="flex items-center gap-12 md:gap-24 shrink-0">
               <img
                 alt="Aguila"
+                width="2000"
+                height="1055"
+                loading="lazy"
+                decoding="async"
                 class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/aguila_2.png"
+                src="/aguila_2.webp"
               />
               <img
                 alt="La Feria Bonita"
+                width="2000"
+                height="2229"
+                loading="lazy"
+                decoding="async"
                 class="h-20 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/feria_2.png"
+                src="/feria_2.webp"
               />
               <img
                 alt="Polafest"
+                width="2000"
+                height="827"
+                loading="lazy"
+                decoding="async"
                 class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/polafest_logo.png"
+                src="/polafest_logo.webp"
               />
               <img
                 alt="Coca Cola"
+                width="2000"
+                height="628"
+                loading="lazy"
+                decoding="async"
                 class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/coca_cola.png"
+                src="/coca_cola.webp"
               />
               <img
                 alt="IMEBU"
+                width="2000"
+                height="536"
+                loading="lazy"
+                decoding="async"
                 class="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                src="/imebu.png"
+                src="/imebu.webp"
               />
             </div>
           </div>
         </div>
         <div class="un-slanted border-t border-white/20 pt-4 w-full flex justify-center">
           <img
-            alt="Advertencia de ley"
+            alt="Advertencia de ley: El exceso de alcohol es perjudicial para la salud. Prohíbase el expendio de bebidas embriagantes a menores de edad."
+            width="2000"
+            height="35"
+            loading="lazy"
+            decoding="async"
             class="h-6 md:h-8 object-contain brightness-0 invert opacity-90"
-            src="/advertencia_1.png"
+            src="/advertencia_1.webp"
           />
         </div>
       </div>
@@ -496,8 +574,12 @@ import Layout from "../layouts/Layout.astro";
     <div class="flex flex-col md:flex-row justify-between items-center w-full gap-4">
       <div>
         <img
-          src="/logosf.png"
+          src="/logosf.webp"
           alt="La Milla Cervecera"
+          width="492"
+          height="366"
+          loading="lazy"
+          decoding="async"
           class="h-16 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity duration-200"
         />
       </div>
@@ -527,8 +609,12 @@ import Layout from "../layouts/Layout.astro";
     <div class="border-t border-white/10 pt-4 flex justify-center items-center gap-2 text-sm text-white/60 font-['Archivo_Narrow']">
       <span>Desarrollado por AP Desarrollo</span>
       <img
-        src="/logo_ap_desarrollo.png"
+        src="/logo_ap_desarrollo.webp"
         alt="AP Desarrollo"
+        width="860"
+        height="639"
+        loading="lazy"
+        decoding="async"
         class="h-5 w-auto object-contain brightness-0 invert opacity-80"
       />
     </div>

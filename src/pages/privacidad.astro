@@ -7,10 +7,14 @@ import Layout from "../layouts/Layout.astro";
   <nav
     class="bg-[#fff9ee] w-full top-0 sticky z-40 border-b-4 border-[#a04100] shadow-[4px_4px_0px_0px_rgba(160,65,0,1)] flex justify-between items-center px-5 md:px-16 py-4"
   >
-    <a class="flex items-center" href="/">
+    <a class="flex items-center" href="/" aria-label="Inicio - La Milla Cervecera">
       <img
-        src="/logosf.png"
+        src="/logosf.webp"
         alt="La Milla Cervecera Logo"
+        width="492"
+        height="366"
+        loading="eager"
+        decoding="async"
         class="h-12 w-auto object-contain hover:skew-x-[-10deg] transition-transform"
       />
     </a>
@@ -20,11 +24,16 @@ import Layout from "../layouts/Layout.astro";
         href="https://www.instagram.com/lapolafest/"
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-[#ff6b00] px-3 py-1 sm:px-5 sm:py-1.5 hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted flex items-center justify-center"
+        class="bg-[#ff6b00] px-3 py-2 sm:px-5 sm:py-1.5 hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted flex items-center justify-center"
+        aria-label="Instagram Polafest"
       >
         <img
-          src="/polafest_logo.png"
+          src="/polafest_logo.webp"
           alt="Polafest"
+          width="2000"
+          height="827"
+          loading="eager"
+          decoding="async"
           class="h-6 sm:h-8 w-auto object-contain un-slanted brightness-0 invert"
         />
       </a>
@@ -32,7 +41,7 @@ import Layout from "../layouts/Layout.astro";
         href="https://quickticket.com.co/event/735168ef-62c7-4e58-8fa2-6bc5e1344129?fbclid=PAcGRvZgRleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwyNTYyODEwNDA1NTgAAaetVql81B_FNZBYgL2ud6LBXwRpZJA1FBrXCoxWDr7gISamrlus_NEXiZ0mzw_aem_GMWJ_Qg1F2b3h6Wyc1UJjA"
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-[#096c4b] text-white font-['Anton'] text-xs sm:text-lg px-3 py-1.5 sm:px-6 sm:py-2 uppercase tracking-wide hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted block text-center"
+        class="bg-[#096c4b] text-white font-['Anton'] text-xs sm:text-lg px-4 py-2.5 sm:px-6 sm:py-2 uppercase tracking-wide hard-shadow-primary hover:translate-y-1 hover:shadow-none transition-all duration-100 slanted block text-center"
       >
         <span class="block un-slanted">REGISTRARSE</span>
       </a>
@@ -129,8 +138,12 @@ import Layout from "../layouts/Layout.astro";
     <div class="flex flex-col md:flex-row justify-between items-center w-full gap-4">
       <div>
         <img
-          src="/logosf.png"
+          src="/logosf.webp"
           alt="La Milla Cervecera"
+          width="492"
+          height="366"
+          loading="lazy"
+          decoding="async"
           class="h-16 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity duration-200"
         />
       </div>
@@ -160,8 +173,12 @@ import Layout from "../layouts/Layout.astro";
     <div class="border-t border-white/10 pt-4 flex justify-center items-center gap-2 text-sm text-white/60 font-['Archivo_Narrow']">
       <span>Desarrollado por AP Desarrollo</span>
       <img
-        src="/logo_ap_desarrollo.png"
+        src="/logo_ap_desarrollo.webp"
         alt="AP Desarrollo"
+        width="860"
+        height="639"
+        loading="lazy"
+        decoding="async"
         class="h-5 w-auto object-contain brightness-0 invert opacity-80"
       />
     </div>

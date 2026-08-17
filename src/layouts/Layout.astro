@@ -16,6 +16,8 @@ const { title = "La Milla Cervecera - Polafest" } = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
@@ -24,6 +26,7 @@ const { title = "La Milla Cervecera - Polafest" } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
+    <slot name="head" />
   </head>
   <body
     class="bg-[#fff9ee] text-white font-['Archivo_Narrow'] font-medium min-h-screen relative overflow-x-hidden"
@@ -33,7 +36,7 @@ const { title = "La Milla Cervecera - Polafest" } = Astro.props;
     <!-- Background Watermark -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-[#fff9ee]">
       <img
-        src="/fondoleo.jpg"
+        src="/fondoleo.webp"
         alt=""
         class="w-full h-full object-cover opacity-[0.08] mix-blend-multiply"
       />
